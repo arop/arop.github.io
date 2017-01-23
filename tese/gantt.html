@@ -1,0 +1,65 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['gantt']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function daysToMilliseconds(days) {
+      return days * 24 * 60 * 60 * 1000;
+    }
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Task ID');
+      data.addColumn('string', 'Task Name');
+      data.addColumn('string', 'Resource');
+      data.addColumn('date', 'Start Date');
+      data.addColumn('date', 'End Date');
+      data.addColumn('number', 'Duration');
+      data.addColumn('number', 'Percent Complete');
+      data.addColumn('string', 'Dependencies');
+
+      data.addRows([
+        ['datasets', 'Analyse datasets', 'Analyse datasets',
+         new Date(2017, 1, 13), new Date(2017, 1, 27), daysToMilliseconds(16),  0,  null],
+        ['categories', 'Analyse category types', 'Analyse datasets',
+         new Date(2017, 1, 13), new Date(2017, 1, 20), daysToMilliseconds(6),  0,  null],
+        ['harem', 'HAREM corpora', 'Analyse datasets',
+         new Date(2017, 1, 21), new Date(2017, 1, 27), daysToMilliseconds(5), 0, 'categories'],
+        ['sigarra', 'Manually annotate SIGARRA\'s news', 'Analyse datasets',
+         new Date(2017, 1, 21), new Date(2017, 2, 6), daysToMilliseconds(10), 0, 'categories'],
+
+        ['tools', 'Evaluate available tools', 'Available tools',
+         new Date(2017, 2, 7), new Date(2017, 2, 28), daysToMilliseconds(16), 0, 'datasets'],
+        ['opennlp', 'OpenNLP', 'Available tools',
+         new Date(2017, 2, 7), new Date(2017, 2, 10), daysToMilliseconds(4), 0, null],
+        ['stanford', 'Stanford NER', 'Available tools',
+         new Date(2017, 2, 13), new Date(2017, 2, 16), daysToMilliseconds(4), 0, 'opennlp'],
+        ['nltk', 'NLTK', 'Available tools',
+         new Date(2017, 2, 17), new Date(2017, 2, 22), daysToMilliseconds(4), 0, 'stanford'],
+        ['spacy', 'spaCy', 'Available tools',
+         new Date(2017, 2, 23), new Date(2017, 2, 28), daysToMilliseconds(4), 0, 'nltk'],
+
+        ['pick', 'Pick best (two) tools', 'Pick',
+         new Date(2017, 2, 29), new Date(2017, 2, 31), daysToMilliseconds(3), 0, 'tools'],
+
+        ['optimise', 'Optimise for use case', 'Optimise',
+         new Date(2017, 3, 3), new Date(2017, 5, 19), daysToMilliseconds(56), 0, 'pick']
+      ]);
+
+      var options = {
+        height: 600
+      };
+
+      var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+<body>
+  <div id="chart_div"></div>
+</body>
+</html>
