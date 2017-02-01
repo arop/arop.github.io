@@ -1,6 +1,7 @@
 <html>
 <head>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/canvg/canvg/3cdcf820/canvg.js"></script>
   <script type="text/javascript">
     google.charts.load('current', {'packages':['gantt']});
     google.charts.setOnLoadCallback(drawChart);
@@ -28,7 +29,7 @@
          new Date(2017, 1, 13), new Date(2017, 1, 20), daysToMilliseconds(6),  0,  null],
         ['harem', 'HAREM corpora', 'Analyse datasets',
          new Date(2017, 1, 21), new Date(2017, 1, 27), daysToMilliseconds(5), 0, 'categories'],
-        ['sigarra', 'Manually annotate SIGARRA\'s news', 'Analyse datasets',
+        ['sigarra', 'Manually annotate \nSIGARRA\'s news', 'Analyse datasets',
          new Date(2017, 1, 21), new Date(2017, 2, 3), daysToMilliseconds(10), 0, 'categories'],
 
         ['tools', 'Evaluate available tools', 'Available tools',
@@ -45,21 +46,40 @@
         ['pick', 'Pick best (two) tools', 'Pick',
          new Date(2017, 3, 3), new Date(2017, 3, 5), daysToMilliseconds(3), 0, 'tools'],
 
-        ['optimise', 'Optimise for SIGARRA\'s news', 'Optimise',
+        ['optimise', 'Optimise for \nSIGARRA\'s news', 'Optimise',
          new Date(2017, 3, 6), new Date(2017, 5, 19), daysToMilliseconds(56), 0, 'pick']
       ]);
 
       var options = {
-        height: 600
+        height: 800,
+        gantt: {
+        	barHeight: 45,
+        	labelStyle: {
+        		fontSize: 22
+        	}
+        }
       };
 
-      var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+      var chart_div = document.getElementById('chart_div');
+      var chart = new google.visualization.Gantt(chart_div);
+
+      // Wait for the chart to finish drawing before calling the getImageURI() method.
+	  /*google.visualization.events.addListener(chart, 'ready', function() {
+	   	var svg = document.getElementsByTagName("svg")[0];
+	    console.log(svg);
+	    var output = document.getElementById('canvas');
+
+	    canvg(output, new XMLSerializer().serializeToString(svg), 
+	    	{ignoreDimensions: true, scaleWidth: output.width, scaleHeight: output.height});
+	  });*/
 
       chart.draw(data, options);
     }
   </script>
 </head>
 <body>
+  <!--<canvas id="canvas" width="2666px" height="1600px"></canvas>-->
+  <!--<br>-->
   <div id="chart_div"></div>
 </body>
 </html>
