@@ -23,31 +23,34 @@
       data.addColumn('string', 'Dependencies');
 
       data.addRows([
+        ['thesis', 'Write dissertation', 'thesis',
+         new Date(2017, 1, 10), new Date(2017, 5, 19), daysToMilliseconds(91),  0,  null],
+
         ['datasets', 'Analyse datasets', 'Analyse datasets',
-         new Date(2017, 1, 13), new Date(2017, 2, 3), daysToMilliseconds(16),  0,  null],
-        ['categories', 'Analyse category types', 'Analyse datasets',
+         new Date(2017, 1, 13), new Date(2017, 2, 3), daysToMilliseconds(15),  0,  null],
+        ['categories', 'Define category types', 'Analyse datasets',
          new Date(2017, 1, 13), new Date(2017, 1, 20), daysToMilliseconds(6),  0,  null],
         ['harem', 'HAREM corpora', 'Analyse datasets',
          new Date(2017, 1, 21), new Date(2017, 1, 27), daysToMilliseconds(5), 0, 'categories'],
         ['sigarra', 'Manually annotate \nSIGARRA\'s news', 'Analyse datasets',
-         new Date(2017, 1, 21), new Date(2017, 2, 3), daysToMilliseconds(10), 0, 'categories'],
+         new Date(2017, 1, 21), new Date(2017, 2, 3), daysToMilliseconds(9), 0, 'categories'],
 
         ['tools', 'Evaluate available tools', 'Available tools',
-         new Date(2017, 2, 6), new Date(2017, 2, 31), daysToMilliseconds(16), 0, 'datasets'],
+         new Date(2017, 2, 6), new Date(2017, 2, 31), daysToMilliseconds(20), 0, 'datasets'],
         ['opennlp', 'OpenNLP', 'Available tools',
-         new Date(2017, 2, 6), new Date(2017, 2, 10), daysToMilliseconds(4), 0, null],
+         new Date(2017, 2, 6), new Date(2017, 2, 10), daysToMilliseconds(5), 0, null],
         ['stanford', 'Stanford NER', 'Available tools',
-         new Date(2017, 2, 13), new Date(2017, 2, 17), daysToMilliseconds(4), 0, 'opennlp'],
+         new Date(2017, 2, 13), new Date(2017, 2, 17), daysToMilliseconds(5), 0, 'opennlp'],
         ['nltk', 'NLTK', 'Available tools',
-         new Date(2017, 2, 20), new Date(2017, 2, 24), daysToMilliseconds(4), 0, 'stanford'],
+         new Date(2017, 2, 20), new Date(2017, 2, 24), daysToMilliseconds(5), 0, 'stanford'],
         ['spacy', 'spaCy', 'Available tools',
-         new Date(2017, 2, 27), new Date(2017, 2, 31), daysToMilliseconds(4), 0, 'nltk'],
+         new Date(2017, 2, 27), new Date(2017, 2, 31), daysToMilliseconds(5), 0, 'nltk'],
 
         ['pick', 'Pick best (two) tools', 'Pick',
          new Date(2017, 3, 3), new Date(2017, 3, 5), daysToMilliseconds(3), 0, 'tools'],
 
         ['optimise', 'Optimise for \nSIGARRA\'s news', 'Optimise',
-         new Date(2017, 3, 6), new Date(2017, 5, 19), daysToMilliseconds(56), 0, 'pick']
+         new Date(2017, 3, 6), new Date(2017, 5, 19), daysToMilliseconds(53), 0, 'pick']
       ]);
 
       var options = {
@@ -64,22 +67,22 @@
       var chart = new google.visualization.Gantt(chart_div);
 
       // Wait for the chart to finish drawing before calling the getImageURI() method.
-	  /*google.visualization.events.addListener(chart, 'ready', function() {
+	  google.visualization.events.addListener(chart, 'ready', function() {
 	   	var svg = document.getElementsByTagName("svg")[0];
 	    console.log(svg);
 	    var output = document.getElementById('canvas');
 
 	    canvg(output, new XMLSerializer().serializeToString(svg), 
 	    	{ignoreDimensions: true, scaleWidth: output.width, scaleHeight: output.height});
-	  });*/
+	  });
 
       chart.draw(data, options);
     }
   </script>
 </head>
 <body>
-  <!--<canvas id="canvas" width="2666px" height="1600px"></canvas>-->
-  <!--<br>-->
+  <canvas id="canvas" width="2666px" height="1700px"></canvas>
+  <br>
   <div id="chart_div"></div>
 </body>
 </html>
