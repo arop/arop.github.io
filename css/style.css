@@ -231,6 +231,17 @@ ul.cat.list-inline li a:hover{
 	padding: 10% 0;
 }
 
+#tf-about a { 
+	color: #888;
+	transition: all 0.8;
+}
+
+#tf-about a:hover,
+#tf-about a:focus{
+	color: #2F937B;
+	text-decoration: none;
+}
+
 #tf-why-me{
 	background: url(../img/10.jpg);
 	background-size: cover;
