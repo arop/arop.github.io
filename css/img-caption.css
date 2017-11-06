@@ -1,3 +1,7 @@
 .project-desc {
 	color: grey;
 }
+
+.pub a {
+	color: rgb(32, 99, 83);
+}
