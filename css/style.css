@@ -1,9 +1,9 @@
 body {
 	background-color: #ccc;
-	min-height: 10000px;
 }
 
-#root div {
+.section {
+	margin-bottom: 100px;
 }
 
 /*
@@ -47,6 +47,50 @@ body {
 
 /*
 	PORTFOLIO
+*/
+#portfolio .section-body {
+	border-left: 1px solid green;
+	padding: 30px;
+}
+#portfolio .section-body .media {
+	padding: 10px;
+}
+#portfolio .section-body img {
+	max-width: 150px;
+}
+
+@media only screen and (max-width: 768px) {
+	#portfolio .section-body {
+		border-left: 0;
+		border-top: 1px solid green;
+	}
+	#portfolio .section-title div {
+		padding: 20px;
+	}
+
+}
+
+/*
+	PUBLICATIONS
+*/
+#publications .section-body {
+	border-left: 1px solid green;
+	padding: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+	#publications .section-body {
+		border-left: 0;
+		border-top: 1px solid green;
+	}
+	#publications .section-title div {
+		padding: 20px;
+	}
+
+}
+
+/*
+	CONTACT ME
 */
 
 /*

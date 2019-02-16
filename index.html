@@ -19,6 +19,7 @@
 
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar sticky-top navbar-expand-md navbar-light">
       <a class="navbar-brand ml-5 h1" href="#">André Pires</a>
       <button id="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,11 +40,12 @@
         </div>
     </nav>
 
+    <!-- Body -->
     <div id="root" class="container-fluid">
         <!-- 
             LADING 
         -->
-        <div id="landing" class="container">
+        <div id="landing" class="section container">
             <div class="row justify-content-between">
                 <div class="col-12 col-md-6 text-center">
                     <img src="./img/favicon.png" class="img-fluid">
@@ -62,16 +64,113 @@
         </div>
         
         <!-- 
+            PORTFOLIO
+        -->
+        <div id="portfolio" class="section container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-12 col-md-4 text-center m-auto section-title">
+                    <div><h2>Porfolio</h2></div>
+                </div>
+                <div class="col-12 col-md-8 section-body">
+                    <div class="media align-items-center">
+                      <a href="https://github.com/arop/ner-re-pt">
+                        <img src="img/projects/tese/thesis.png" class="mr-3 img-fluid align-self-center">
+                      </a>
+                      <div class="media-body">
+                        <h5>Named entity extraction from Portuguese web text</h5>
+                        <p>Dissertation on Information Extraction and Natural Language Processing (NLP), namely Named Entity Recognition, for the Portuguese language, using NLP tools, such as Stanford CoreNLP, OpenNLP, spaCy and NLTK.</p>
+                      </div>
+                    </div>
+                    <div class="media align-items-center">
+                        <a href="https://play.google.com/store/apps/details?id=com.arop.fueltracking">
+                            <img src="img/projects/fueltracking.png" class="mr-3 img-fluid align-self-center">
+                        </a>
+                        <div class="media-body">
+                            <h5>Fuel Tracking</h5>
+                            <p>Android app to track fuel spending.</p>
+                        </div>
+                    </div>
+                    <div class="media align-items-center">
+                        <a href="https://play.google.com/store/apps/details?id=com.arop.caveRoller">
+                            <img src="img/projects/caveroller.png" class="mr-3 img-fluid align-self-center">
+                        </a>
+                        <div class="media-body">
+                            <h5>Cave Roller</h5>
+                            <p>Infinite runner game, Android app, developed using Unity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
             ABOUT ME
         -->
-        <div id="portfolio" class="row"></div>
-        <div id="about-me" class="row"></div>
-        <div id="publications" class="row"></div>
-        <div id="contact-me" class="row"></div>
-        <div id="footer" class="row"></div>
+        <div id="about-me" class="section container"></div>
+
+        <!-- 
+            PUBLICATIONS
+        -->
+        <div id="publications" class="section container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-12 col-md-4 text-center m-auto section-title">
+                    <div><h2>Publications</h2></div>
+                </div>
+                <div class="col-12 col-md-8 section-body">
+                    <div class="pub">
+                        <h4>Master's thesis</h4>
+                        <p>André Pires (2017, July). <i>Named entity extraction from Portuguese web text</i>. Master thesis, Faculty of Engineering University of Porto. Retrieved from <a href="http://hdl.handle.net/10216/106094">http://hdl.handle.net/10216/106094</a>.</p>
+                    </div>
+                    <div class="pub">
+                        <h4>Paper INForum</h4>
+                        <p>André Pires, José Devezas and Sérgio Nunes. <i>Benchmarking Named Entity Recognition Tools for Portuguese</i>. In: Proceedings of the Ninth INForum: Simpósio de Informática, Aveiro, Portugal. (2017, October) 111-121. (<a href="pubs/artigo-inforum-2017-04.pdf">link</a>)</p>
+                    </div>
+                    <div class="pub">
+                        <h4>Other</h4>
+                        <p>André Pires, Sérgio Nunes and José Devezas. <i>SIGARRA News Corpus</i>. <a href="https://rdm.inesctec.pt/dataset/cs-2017-004">https://rdm.inesctec.pt/dataset/cs-2017-004</a>, jun 2017.</p>
+                        <p>André Pires. <i>HAREM NER Models for OpenNLP, Stanford CoreNLP, spaCy, NLTK</i>. <a href="https://rdm.inesctec.pt/dataset/cs-2017-005">https://rdm.inesctec.pt/dataset/cs-2017-005</a>, jun 2017.</p>
+                        <p>André Pires. <i>SIGARRA News Corpus NER Models for OpenNLP, Stanford CoreNLP, spaCy, NLTK</i>. <a href="https://rdm.inesctec.pt/dataset/cs-2017-006">https://rdm.inesctec.pt/dataset/cs-2017-006</a>, jun 2017.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+            CONTACT ME
+        -->
+        <div id="contact-me" class="section container">
+            <div class="row justify-content-center">
+                <div class="text-center">
+                    <h3>Contact Me</h3>
+                    <p>Feel free to contact me.</p>
+                    <p><a style="color:black" href="mailto:andre.r.o.pires@gmail.com">Gmail</a></p>
+                    <hr>
+                </div>
+
+                <div class="space"></div>
+
+                <div class="row justify-content-center logos">
+                    <div class="col-2 col-md-1">
+                        <a href="https://github.com/arop"><img class="img-fluid" src="img/logos/github-logo.svg"></a>
+                    </div>
+
+                    <div class="col-2 col-md-1">
+                        <a href="https://play.google.com/store/apps/developer?id=Andr%C3%A9+Pires"><img class="img-fluid" src="img/logos/playstore-logo.png"></a>
+                    </div>
+
+                    <div class="col-2 col-md-1">
+                        <a href="https://www.linkedin.com/in/andreropires"><img class="img-fluid" src="img/logos/linkedin-logo.png"></a>
+                    </div>
+                    <div class="col-2 col-md-1">
+                        <a href="cv/cv.pdf"><img class="img-fluid" src="img/logos/cv-logo.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <nav class="navbar fixed-bottom navbar-dark bg-dark footer">
+    <!-- Footer -->
+    <nav class="navbar fixed-bottom navbar-dark bg-dark footer pb-0">
         <div class="ml-5">
             <p class="navbar-brand">André Pires © <span id="current-year"></span></p>
         </div>
