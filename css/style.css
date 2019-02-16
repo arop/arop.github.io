@@ -48,3 +48,10 @@ body {
 /*
 	PORTFOLIO
 */
+
+/*
+	FOOTER
+*/
+.footer .social-media a {
+	color: white;
+}
