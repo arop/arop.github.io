@@ -13,6 +13,7 @@
     <!-- Vendor -->
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="vendor/fonts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css/animate.css">
 
     <!-- Personal -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -48,7 +49,7 @@
         <div id="landing" class="section container">
             <div class="row justify-content-between">
                 <div class="col-12 col-md-6 text-center">
-                    <img id="my-face" src="./img/favicon.png" class="img-fluid">
+                    <img id="my-face" src="./img/favicon.png" class="img-fluid wow zoomIn">
                 </div>
                 <div class="col-12 col-md-6 m-auto text-center landing-text">
                     <h1 class="display-2">André Pires</h1>
@@ -56,17 +57,17 @@
                     
                     <div class="mt-5 row justify-content-center">
                         <div class="col col-sm-2 align-middle">
-                            <a href="https://github.com/arop"><img class="img-fluid" src="img/logos/github-logo.svg"></a>
+                            <a href="https://github.com/arop"><img class="img-fluid wow bounce" src="img/logos/github-logo.svg"></a>
                         </div>
                         <div class="col col-sm-2 align-middle">
-                            <a href="https://play.google.com/store/apps/developer?id=Andr%C3%A9+Pires"><img class="img-fluid" src="img/logos/playstore-logo.png"></a>
+                            <a href="https://play.google.com/store/apps/developer?id=Andr%C3%A9+Pires"><img class="img-fluid wow bounce slow" src="img/logos/playstore-logo.png"></a>
                         </div>
 
                         <div class="col col-sm-2 align-middle">
-                            <a href="https://www.linkedin.com/in/andreropires"><img class="img-fluid" src="img/logos/linkedin-logo.png"></a>
+                            <a href="https://www.linkedin.com/in/andreropires"><img class="img-fluid wow bounce slow" src="img/logos/linkedin-logo.png"></a>
                         </div>
                         <div class="col col-sm-2 align-middle">
-                            <a href="mailto:andre.r.o.pires@gmail.com"><img class="img-fluid" src="img/logos/gmail-logo.png"></a>
+                            <a href="mailto:andre.r.o.pires@gmail.com"><img class="img-fluid wow bounce slower" src="img/logos/gmail-logo.png"></a>
                         </div>
                     </div>
                 </div>
@@ -79,7 +80,7 @@
         <div id="portfolio" class="section container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-12 col-md-4 text-center m-auto section-title">
-                    <div><h2>Portfolio</h2></div>
+                    <div><h2 class="wow zoomInUp">Portfolio</h2></div>
                 </div>
                 <div class="col-12 col-md-8 section-body">
                     <div class="pub">
@@ -101,7 +102,7 @@
                         <p class="pub-keywords"><i>Keywords: Android, Unity, Ionic, AngularJS, Firebase, Ruby on Rails</i></p>
                         <div class="row">
                             <a href="https://play.google.com/store/apps/details?id=com.arop.fueltracking" class="col-12 col-sm-6 col-lg-4 pub-item">
-                                <div class="card align-items-center text-center">
+                                <div class="card align-items-center text-center wow fadeIn">
                                   <img src="img/projects/fueltracking.png" class="card-img-top">
                                   <h5 class="card-title">Fuel Tracking</h5>
                                   <div class="card-body">
@@ -167,7 +168,7 @@
         <div id="about-me" class="section container">
             <div class="row">
                 <div class="col-12 col-md-4 text-center m-auto section-title">
-                    <div><h2>About Me</h2></div>
+                    <div><h2 class="wow zoomInUp">About Me</h2></div>
                 </div>
                 <blockquote class="blockquote text-center .section-body mt-3">
                     <p class="lead">I'm currently a software engineer at <a href="https://switchpayments.com/">Switch S.A.</a> - a fintech, where we work with a micro-services architecture to make online payments easier and better.
@@ -188,7 +189,7 @@
         <div id="publications" class="section container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-12 col-md-4 text-center m-auto section-title">
-                    <div><h2>Publications</h2></div>
+                    <div><h2 class="wow zoomInUp">Publications</h2></div>
                 </div>
                 <div class="col-12 col-md-8 section-body">
                     <div class="pub">
@@ -225,6 +226,10 @@
             </ul>
         </div>
     </nav>
+
+    <!-- WOW.js -->
+    <script type="text/javascript" src="vendor/js/wow.min.js"></script>
+    <script>new WOW().init();</script>
 
     <!-- Google analytics -->
     <script>
