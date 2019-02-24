@@ -135,11 +135,40 @@ body {
 }
 
 /*
+	ABOUT ME
+*/
+#about-me a {
+	text-decoration: none;
+	color: rgb(70,70,80);
+	font-weight: 500;
+}
+
+#about-me a:hover {
+	text-decoration: none;
+	color: rgb(40,40,50);
+}
+
+#about-me.section .section-title {
+	border-bottom: 1px solid green;
+}
+
+/*
 	PUBLICATIONS
 */
 #publications .section-body {
 	border-left: 1px solid green;
 	padding: 30px;
+}
+
+#publications a {
+	text-decoration: underline;
+	color: rgb(70,70,80);
+	font-weight: 500;
+}
+
+#publications a:hover {
+	text-decoration: underline;
+	color: rgb(40,40,50);
 }
 
 @media only screen and (max-width: 768px) {
@@ -150,12 +179,7 @@ body {
 	#publications .section-title div {
 		padding: 20px;
 	}
-
 }
-
-/*
-	CONTACT ME
-*/
 
 /*
 	FOOTER
