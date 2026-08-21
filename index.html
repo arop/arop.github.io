@@ -1,210 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="utf-8">
-    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>André Pires</title>
-    <meta name="description" content="André Pires page">
-    <meta name="keywords" content="andre, pires, lead, software, enginneer, uphold, crypto, switch, switch payments, saltpay, teya, feup, mieic, ei12058">
-
-    <link rel="shortcut icon" type="image/jpg" href="img/favicon.jpg"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>André Pires | Head of Digital Payments</title>
     
-    <!-- Vendor -->
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="vendor/fonts/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="vendor/css/animate.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.jpg"/>
 
-    <!-- Personal -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        gray: {
+                            900: '#121318',
+                            800: '#1e1f26',
+                            700: '#2b2d35',
+                        },
+                        brand: {
+                            500: '#3b82f6',
+                            400: '#60a5fa',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { background-color: #121318; color: #e5e7eb; }
+        .glass-card {
+            background: rgba(30, 31, 38, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .social-btn {
+            transition: all 0.3s ease;
+        }
+        .social-btn:hover {
+            transform: translateY(-2px);
+            color: #60a5fa;
+        }
+    </style>
 </head>
-<body>
-    <!-- Navbar -->
-    <nav id="top-navbar" class="navbar sticky-top navbar-expand-md navbar-light">
-      <a class="navbar-brand ml-4 ml-md-5 h1" href="#">André Pires</a>
-      <button id="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ml-md-auto mr-md-5 ml-4">
-            <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about-me">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#publications">Publications</a>
-            </li>
-          </ul>
+<body class="antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 glass-card border-b border-gray-800">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold font-mono text-white tracking-tight">AP<span class="text-brand-500">.</span></a>
+            <div class="space-x-6 text-sm font-medium hidden md:block">
+                <a href="#about" class="hover:text-brand-400 transition-colors">About</a>
+                <a href="#portfolio" class="hover:text-brand-400 transition-colors">Portfolio</a>
+                <a href="#publications" class="hover:text-brand-400 transition-colors">Publications</a>
+            </div>
+            <!-- Quick Links -->
+            <div class="flex space-x-4 text-gray-400">
+                <a href="mailto:andre.r.o.pires@gmail.com" class="social-btn" title="Email"><i class="fa-regular fa-envelope text-lg"></i></a>
+                <a href="https://github.com/arop" target="_blank" class="social-btn" title="GitHub"><i class="fa-brands fa-github text-lg"></i></a>
+                <a href="https://www.linkedin.com/in/andreropires" target="_blank" class="social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin text-lg"></i></a>
+            </div>
         </div>
     </nav>
 
-    <!-- Body -->
-    <div id="root" class="container-fluid">
-        <!--
-            LANDING 
-        -->
-        <div id="landing" class="section container">
-            <div class="row justify-content-between">
-                <div class="col-12 col-md-6 text-center">
-                    <img id="my-face" src="./img/favicon.jpg" class="img-fluid wow zoomIn">
-                </div>
-                <div class="col-12 col-md-6 m-auto text-center landing-text">
-                    <h1 class="display-2">André Pires</h1>
-                    <h4 class="text-muted">Lead Software Engineer at <a href="https://uphold.com/">Uphold</a></h4>
-                    
-                    <div class="mt-5 row justify-content-center">
-                        <div class="col col-sm-2 align-middle">
-                            <a href="https://github.com/arop"><img class="img-fluid wow bounce" src="img/logos/github-logo.svg"></a>
-                        </div>
-                        <div class="col col-sm-2 align-middle">
-                            <a href="https://play.google.com/store/apps/developer?id=Andr%C3%A9+Pires"><img class="img-fluid wow bounce slow" src="img/logos/playstore-logo.png"></a>
-                        </div>
-
-                        <div class="col col-sm-2 align-middle">
-                            <a href="https://www.linkedin.com/in/andreropires"><img class="img-fluid wow bounce slow" src="img/logos/linkedin-logo.png"></a>
-                        </div>
-                        <div class="col col-sm-2 align-middle">
-                            <a href="mailto:andre.r.o.pires@gmail.com"><img class="img-fluid wow bounce slower" src="img/logos/gmail-logo.png"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <main class="flex-grow max-w-5xl mx-auto px-6 py-12 w-full space-y-24">
         
-        <!-- 
-            PORTFOLIO
-        -->
-        <div id="portfolio" class="section container">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-12 col-md-4 text-center m-auto section-title">
-                    <div><h2 class="wow zoomInUp">Portfolio</h2></div>
+        <!-- Hero & About Section -->
+        <section id="about" class="pt-12 md:pt-20 flex flex-col-reverse md:flex-row items-center gap-12">
+            <div class="flex-1">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
+                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-blue-600">André Pires</span>
+                </h1>
+                <h2 class="text-xl md:text-2xl text-gray-400 font-mono mb-8">
+                    Head of Digital Payments @ <a href="https://uphold.com/">Uphold</a>
+                </h2>
+                
+                <div class="prose prose-invert max-w-2xl text-gray-300 leading-relaxed text-lg">
+                    <p class="mb-4">
+                        I'm currently the Head of Digital Payments at Uphold, where I manage engineering teams to offer a unique trading experience and help people and businesses have access to safe, transparent, fair, and affordable financial services.
+                    </p>
+                    <p class="mb-4">
+                        Previously, I worked at Teya (formerly SaltPay), where we developed fast and secure payment solutions that helped small and medium-sized businesses better manage and grow their operations; 
+                        and at Switch S.A., where we worked with a micro-services architecture to make online payments easier and better. 
+                        I was a researcher at INESC TEC and finished my Master's in Informatics and Computing Engineering at FEUP.
+                    </p>
+                    <p class="mb-4">
+                        My skills are mainly focused on backend development, team management, and digital payments. Outside of work, I enjoy playing the piano, exploring drone photography, and traveling.
+                    </p>
                 </div>
-                <div class="col-12 col-md-8 section-body">
-                    <div class="pub mb-3">
-                        <h4 class="pub-title">Master's thesis</h4>
-                        <p class="pub-keywords"><i>Keywords: Python, Machine Learning, Natural Language Processing</i></p>
-                        <a href="https://github.com/arop/ner-re-pt" class="wow fadeIn">
-                            <div class="card col align-items-center text-center">
-                              <img src="img/projects/tese/thesis.png" class="card-img-top">
-                              <h5 class="card-title">Named entity extraction from Portuguese web text</h5>
-                              <div class="card-body">
-                                <p class="card-text">Dissertation on Information Extraction and Natural Language Processing (NLP), namely Named Entity Recognition, for the Portuguese language, using NLP tools, such as Stanford CoreNLP, OpenNLP, spaCy and NLTK.</p>
-                              </div>
-                            </div>
-                        </a>
-                    </div>
 
-                    <div class="pub">
-                        <h4 class="pub-title">Android and Web Apps</h4>
-                        <p class="pub-keywords"><i>Keywords: Android, Unity, Firebase</i></p>
-                        <div class="row">
-                            <a href="https://play.google.com/store/apps/details?id=com.arop.fueltracking" class="col-12 col-sm-6 col-lg-4 pub-item">
-                                <div class="card align-items-center text-center wow fadeIn">
-                                  <img src="img/projects/fueltracking.png" class="card-img-top">
-                                  <h5 class="card-title">Fuel Tracking</h5>
-                                  <div class="card-body">
-                                    <p class="card-text">Android app to track fuel spending.</p>
-                                  </div>
-                                </div>
-                            </a>
-                            <a href="https://play.google.com/store/apps/details?id=com.arop.caveRoller" class="col-12 col-sm-6 col-lg-4 pub-item wow fadeIn">
-                                <div class="card align-items-center text-center">
-                                  <img src="img/projects/caveroller.png" class="card-img-top">
-                                  <h5 class="card-title">Cave Roller</h5>
-                                  <div class="card-body">
-                                    <p class="card-text">Infinite runner game, Android app, developed using Unity.</p>
-                                  </div>
-                                </div>
-                            </a>
-                            <a href="https://dei.fe.up.pt/" class="col-12 col-sm-6 col-lg-4 pub-item wow fadeIn">
-                                <div class="card align-items-center text-center">
-                                  <img src="img/projects/dei.png" class="card-img-top">
-                                  <h5 class="card-title">FEUP DEI sites</h5>
-                                  <div class="card-body">
-                                    <p class="card-text">Websites and microsites of FEUP's Department of Informatics, developed using wordpress.</p>
-                                  </div>
-                                </div>
-                            </a>
-                        </div>
-                        
+                <div class="flex flex-wrap gap-3 mt-6">
+                    <span class="px-3 py-1 text-sm bg-gray-800 border border-gray-700 rounded-full font-mono text-brand-400">Backend Development</span>
+                    <span class="px-3 py-1 text-sm bg-gray-800 border border-gray-700 rounded-full font-mono text-brand-400">Team Management</span>
+                    <span class="px-3 py-1 text-sm bg-gray-800 border border-gray-700 rounded-full font-mono text-brand-400">Digital Payments</span>
+                </div>
+
+                <!-- Call to Action links -->
+                <div class="mt-10 flex gap-4">
+                    <a href="mailto:andre.r.o.pires@gmail.com" class="px-6 py-3 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors">
+                        <i class="fa-regular fa-envelope mr-2"></i> Get in touch
+                    </a>
+                    <a href="https://play.google.com/store/apps/developer?id=Andr%C3%A9+Pires" target="_blank" class="px-6 py-3 glass-card hover:bg-gray-800 text-white font-semibold rounded-lg transition-colors border border-gray-700">
+                        <i class="fa-brands fa-google-play mr-2 text-green-400"></i> Play Store
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Image -->
+            <div class="w-48 h-48 md:w-72 md:h-72 shrink-0 relative">
+                <div class="absolute inset-0 bg-brand-500 rounded-full blur-2xl opacity-20 animate-pulse"></div>
+                <img src="https://github.com/arop.png" alt="André Pires" class="rounded-full w-full h-full object-cover border-4 border-gray-800 relative z-10 shadow-2xl transition-transform hover:scale-105 duration-300">
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <div class="flex justify-between items-end mb-8 border-b border-gray-800 pb-4">
+                <h3 class="text-3xl font-bold text-white">Portfolio & Projects</h3>
+                <a href="https://github.com/arop" target="_blank" class="text-brand-400 hover:text-brand-300 font-mono text-sm flex items-center">
+                    View all on GitHub <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-card p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 group">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-xl font-bold text-white group-hover:text-brand-400 transition-colors">Fuel Tracking</h4>
+                        <a href="https://play.google.com/store/apps/details?id=com.arop.fueltracking" target="_blank" class="text-gray-500 hover:text-green-400" title="View on Play Store"><i class="fa-brands fa-google-play text-xl"></i></a>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6">Android app to track fuel spending.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs font-mono bg-blue-900/30 text-blue-400 px-2 py-1 rounded">Android</span>
+                        <span class="text-xs font-mono bg-blue-900/30 text-blue-400 px-2 py-1 rounded">Firebase</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 group">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-xl font-bold text-white group-hover:text-brand-400 transition-colors">Cave Roller</h4>
+                        <a href="https://play.google.com/store/apps/details?id=com.arop.caveRoller" target="_blank" class="text-gray-500 hover:text-green-400" title="View on Play Store"><i class="fa-brands fa-google-play text-xl"></i></a>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6">Infinite runner game, Android app, developed using Unity.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs font-mono bg-blue-900/30 text-blue-400 px-2 py-1 rounded">Unity</span>
+                        <span class="text-xs font-mono bg-blue-900/30 text-blue-400 px-2 py-1 rounded">C#</span>
+                        <span class="text-xs font-mono bg-blue-900/30 text-blue-400 px-2 py-1 rounded">Android</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 group">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-xl font-bold text-white group-hover:text-brand-400 transition-colors">Master's Thesis: NER</h4>
+                        <a href="http://hdl.handle.net/10216/106094" target="_blank" class="text-gray-500 hover:text-brand-400" title="Read Publication"><i class="fa-solid fa-arrow-up-right-from-square text-lg"></i></a>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6">Named entity extraction from Portuguese web text.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs font-mono bg-blue-900/30 text-blue-400 px-2 py-1 rounded">Python</span>
+                        <span class="text-xs font-mono bg-blue-900/30 text-blue-400 px-2 py-1 rounded">Machine Learning</span>
+                        <span class="text-xs font-mono bg-blue-900/30 text-blue-400 px-2 py-1 rounded">NLP</span>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="glass-card p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 group">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-xl font-bold text-white group-hover:text-brand-400 transition-colors">FEUP DEI Sites</h4>
+                        <a href="https://dei.fe.up.pt/" class="text-gray-500 hover:text-brand-400" title="Visit Website"><i class="fa-solid fa-globe text-lg"></i></a>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6">Websites and microsites of FEUP's Department of Informatics, developed using WordPress.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs font-mono bg-blue-900/30 text-blue-400 px-2 py-1 rounded">Web</span>
+                        <span class="text-xs font-mono bg-blue-900/30 text-blue-400 px-2 py-1 rounded">WordPress</span>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- 
-            ABOUT ME
-        -->
-        <div id="about-me" class="section container">
-            <div class="row">
-                <div class="col-12 col-md-4 text-center m-auto section-title">
-                    <div><h2 class="wow zoomInUp">About Me</h2></div>
-                </div>
-                <blockquote class="blockquote text-center .section-body mt-3">
-                    <p class="lead">I'm currently a lead software engineer at <a href="https://uphold.com/">Uphold</a> where offer a unique trading experience and help people and businesses have access to safe, transparent, fair, and affordable financial services.
-                        
-                    Previously, I worked at <a href="https://teya.com">Teya</a> (formerly SaltPay), where we developed fast and secure payment solutions that helped small and medium-sized businesses better manage and grow their operations; 
-                    and at <a href="https://switchpayments.com/">Switch S.A.</a>, where we worked with a micro-services architecture to make online payments easier and better.
+        <!-- Publications Section -->
+        <section id="publications" class="mb-12">
+            <h3 class="text-3xl font-bold text-white mb-8 border-b border-gray-800 pb-4">Publications</h3>
+            
+            <div class="space-y-6">
+                <a href="http://hdl.handle.net/10216/106094" target="_blank" class="block border-l-2 border-brand-500 pl-4 hover:bg-gray-800/50 p-2 rounded transition-colors group">
+                    <h4 class="text-lg font-bold text-white group-hover:text-brand-400 transition-colors">Named entity extraction from Portuguese web text <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1 opacity-0 group-hover:opacity-100 transition-opacity"></i></h4>
+                    <p class="text-sm text-brand-400 font-mono mb-2">Master thesis, Faculty of Engineering University of Porto (Jul 2017)</p>
+                    <p class="text-sm text-gray-400">André Pires.</p>
+                </a>
 
-                    I was researcher at <a href="https://www.inesctec.pt">INESC TEC</a> and finished the <strong><i>Master in Informatics and Computing Engineering</i></strong> at <a href="https://sigarra.up.pt/feup/">FEUP</a>, where my Master thesis - <i><a href="https://github.com/arop/ner-re-pt/">Named entity extraction from Portuguese web text</a></i> - was in the Information Extraction field, where its main purpose was to find a way to extract entities from Portuguese texts.
+                <a href="pubs/artigo-inforum-2017-04.pdf" target="_blank" class="block border-l-2 border-brand-500 pl-4 hover:bg-gray-800/50 p-2 rounded transition-colors group">
+                    <h4 class="text-lg font-bold text-white">Benchmarking Named Entity Recognition Tools for Portuguese</h4>
+                    <p class="text-sm text-brand-400 font-mono mb-2">Ninth INForum: Simpósio de Informática (Oct 2017)</p>
+                    <p class="text-sm text-gray-400">André Pires, José Devezas and Sérgio Nunes.</p>
+                </a>
 
-                    My main skills are mainly related to web and mobile development, and also in the areas of Artificial Intelligence, Information Systems and Data Mining.
-
-                    My main interests focus on web and mobile development, data bases and data mining. Apart from informatics, I enjoy playing the piano.</p>
-                </p>
-                </blockquote>
-            </div>
-        </div>
-
-        <!-- 
-            PUBLICATIONS
-        -->
-        <div id="publications" class="section container">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-12 col-md-4 text-center m-auto section-title">
-                    <div><h2 class="wow zoomInUp">Publications</h2></div>
-                </div>
-                <div class="col-12 col-md-8 section-body">
-                    <div class="pub">
-                        <h4>Master's thesis</h4>
-                        <p>André Pires (2017, July). <i>Named entity extraction from Portuguese web text</i>. Master thesis, Faculty of Engineering University of Porto. Retrieved from <a href="http://hdl.handle.net/10216/106094">http://hdl.handle.net/10216/106094</a>.</p>
-                    </div>
-                    <div class="pub">
-                        <h4>Paper INForum</h4>
-                        <p>André Pires, José Devezas and Sérgio Nunes. <i>Benchmarking Named Entity Recognition Tools for Portuguese</i>. In: Proceedings of the Ninth INForum: Simpósio de Informática, Aveiro, Portugal. (2017, October) 111-121. (<a href="pubs/artigo-inforum-2017-04.pdf">link</a>)</p>
-                    </div>
-                    <div class="pub">
-                        <h4>Other</h4>
-                        <p>André Pires, Sérgio Nunes and José Devezas. <i>SIGARRA News Corpus</i>. <a href="https://rdm.inesctec.pt/dataset/cs-2017-004">https://rdm.inesctec.pt/dataset/cs-2017-004</a>, jun 2017.</p>
-                        <p>André Pires. <i>HAREM NER Models for OpenNLP, Stanford CoreNLP, spaCy, NLTK</i>. <a href="https://rdm.inesctec.pt/dataset/cs-2017-005">https://rdm.inesctec.pt/dataset/cs-2017-005</a>, jun 2017.</p>
-                        <p>André Pires. <i>SIGARRA News Corpus NER Models for OpenNLP, Stanford CoreNLP, spaCy, NLTK</i>. <a href="https://rdm.inesctec.pt/dataset/cs-2017-006">https://rdm.inesctec.pt/dataset/cs-2017-006</a>, jun 2017.</p>
-                    </div>
+                <div class="border-l-2 border-gray-700 pl-4 p-2 rounded">
+                    <h4 class="text-lg font-bold text-white mb-2">Corpora & NER Models</h4>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li><a href="https://rdm.inesctec.pt/dataset/cs-2017-004" target="_blank" class="hover:text-brand-400"><i class="fa-solid fa-link mr-1 text-xs"></i> SIGARRA News Corpus (Jun 2017)</a></li>
+                        <li><a href="https://rdm.inesctec.pt/dataset/cs-2017-005" target="_blank" class="hover:text-brand-400"><i class="fa-solid fa-link mr-1 text-xs"></i> HAREM NER Models for OpenNLP, Stanford CoreNLP, spaCy, NLTK</a></li>
+                        <li><a href="https://rdm.inesctec.pt/dataset/cs-2017-006" target="_blank" class="hover:text-brand-400"><i class="fa-solid fa-link mr-1 text-xs"></i> SIGARRA News Corpus NER Models</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- Footer -->
-    <nav class="navbar fixed-bottom navbar-dark bg-dark footer pb-0">
-        <div class="ml-4 ml-md-5">
-            <p class="copyright">André Pires © <span id="current-year"></span></p>
-        </div>
-        <div class="ml-auto mr-4 mr-md-5">
-            <ul class="social-media list-inline">
-                <li class="list-inline-item"><a href="https://github.com/arop"><span class="fa fa-github"></span></a></li>
-                <li class="list-inline-item"><a href="https://www.linkedin.com/in/andreropires"><span class="fa fa-linkedin"></span></a></li>
-                <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCg7b1UaTxUiykg6kO1Sh-cg"><span class="fa fa-youtube"></span></a></li>
-                <li class="list-inline-item"><a href="https://www.facebook.com/andre.r.o.pires"><span class="fa fa-facebook"></span></a></li>
-            </ul>
-        </div>
-    </nav>
+    </main>
 
-    <!-- WOW.js -->
-    <script type="text/javascript" src="vendor/js/wow.min.js"></script>
-    <script>new WOW().init();</script>
+    <footer class="border-t border-gray-800 mt-auto py-8">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-gray-500 text-sm">&copy; <span id="current-year"></span> André Pires.</p>
+            <div class="flex space-x-4 text-gray-500">
+                <a href="mailto:andre.r.o.pires@gmail.com" class="hover:text-white transition-colors"><i class="fa-regular fa-envelope text-lg"></i></a>
+                <a href="https://github.com/arop" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                <a href="https://www.linkedin.com/in/andreropires" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                <a href="https://www.youtube.com/channel/UCg7b1UaTxUiykg6kO1Sh-cg" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-youtube text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
 
     <!-- Google analytics -->
     <script>
@@ -222,13 +249,6 @@
         // Update current year on copyright
         (function (d) {
             d.getElementById("current-year").innerHTML = (new Date()).getFullYear();
-        })(document);
-
-        // Toggle navbar without bootstrap js
-        (function (d) {
-            d.getElementById("navbar-toggler").addEventListener('click', function (argument) {
-                d.getElementById("navbarNavDropdown").classList.toggle('collapse');
-            });
         })(document);
     </script>
 </body>
